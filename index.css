@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    font-family: 'inter', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.hero-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./utils/images/5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background-color: transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+}
+
+.logo a {
+    font-size: 35px;
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+ul>li:not(.ctaBtn)>a {
+    color: #fff;
+    transition: color 0.2s;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.ctaBtn>a {
+    color: #fff;
+    transition: color 0.2s;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 6px 18px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+    box-shadow: 0 0 12px #00f2fe80;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+ul>li:hover:not(.ctaBtn)>a {
+    color: #364;
+    background-color: brown;
+}
+
+.hero {
+    height: 89vh;
+    /* border-bottom: 2px solid white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero>h1 {
+    margin-top: -50px;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+
+.hero>p {
+    color: #bdbcbc;
+    margin-top: 20px;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.hero>button {
+    padding: 17px 40px;
+    background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+    box-shadow: 0 0 12px #00f2fe80;
+    border: none;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.hero>button:hover {
+    opacity: 1;
+    transform: scale(1.02);
+    transition: opacity transform 0.3s;
+}
+
+.hero-reviews {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-reviews>img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.hero-reviews>p {
+    font-size: 20px;
+    margin-left: 15px;
+    color: #bdbcbc;
+    opacity: 0.8;
+}
+
+.hero-reviews>img:not(first-child) {
+    margin-left: -15px;
+}
+
+.steps-img-wrap {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    margin: 50px auto;
+}
+
+.steps-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.steps {
+    padding: 50px 20px;
+    background-image: url(./utils/images/3.png);
+    background-size: cover;
+    background-position-x: left;
+    background-position-y: 30%;
+}
+
+.step-card {
+    height: 500px;
+    border-radius: 10px;
+    background-color: #ffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./utils/images/night.jpg);
+    transition: background-image 1s linear;
+    background-size: cover;
+    box-shadow: 3px 2px 12px rgba(0, 0, 0, 0.8);
+}
+.step-card:hover{
+    background-image: url(./utils/images/night-2.png);
+    transition: background-image 1s linear;
+}
+.about-word::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  margin: 0 0 0 500px;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  border-radius: 10px;
+  height: 5px;
+  background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+  transform: scaleX(1);
+  transition: transform 0.3s;
+  transform-origin: right;
+}
