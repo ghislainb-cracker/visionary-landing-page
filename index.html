@@ -15,6 +15,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
     <title>Visionify</title>
 </head>
 
@@ -51,7 +53,8 @@
     <main>
         <section class="steps">
             <div>
-                <h2 style="text-align: center; font-size: 50px; letter-spacing: 1px; position: relative;" class="about-word">3 Easy Steps</h2>
+                <h2 style="text-align: center; font-size: 50px; letter-spacing: 1px; position: relative;"
+                    class="about-word">3 Easy Steps</h2>
                 <div class="steps-img-wrap">
                     <div style="display: flex; width: 100%; gap: 20px;">
                         <div class="step-card">
@@ -69,12 +72,48 @@
                     </div>
                 </div>
             </div>
-            <!-- <div>
-                <h2>Top fetaures</h2>
-            </div>
-            <div>
-                <h2>Benefits for target audience</h2>
-            </div> -->
+             <div class="one">
+                        <h1 style="font-size: 90px; color: violet;" class="text">The easiest way is to find the hardest
+                            way</h1>
+                            <div style="display: flex; justify-content: center; align-items: center; gap: 120px; padding-bottom: 90px; overflow: hidden;">
+
+                                <div class="rhombus-wrapper">
+                                    <div class="glow-border"></div>
+                                    <div class="content">
+                                        <h3>Visual search</h3>
+                                        <p>Unlock the power of automation and data-driven decisions.</p>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="rhombus-wrapper">
+                                    <div class="glow-border"></div>
+                                    <div class="content">
+                                        <h3>AI Tagging & categorization</h3>
+                                        <p>Unlock the power of automation and data-driven decisions.</p>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="rhombus-wrapper">
+                                    <div class="glow-border"></div>
+                                    <div class="content">
+                                        <h3>API for developers</h3>
+                                        <p>Unlock the power of automation and data-driven decisions.</p>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="rhombus-wrapper">
+                                    <div class="glow-border"></div>
+                                    <div class="content">
+                                        <h3>Fast & accurate recognition</h3>
+                                        <p>Unlock the power of automation and data-driven decisions.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
         </section>
         <!-- <section>
             <div>
@@ -93,5 +132,18 @@
         </section> -->
     </main>
 </body>
+<script>
+    gsap.to(".glow-border", {
+        backgroundPosition: "200% 200%",
+        duration: 5,
+        ease: "linear",
+        repeat: -1
+    });
+
+    gsap.fromTo(".rhombus-wrapper",
+        { scale: 1 },
+        { scale: 1.05, yoyo: true, repeat: -1, duration: 2, ease: "power1.inOut" }
+    );
+</script>
 
 </html>
