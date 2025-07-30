@@ -1,14 +1,16 @@
-.text {
+.texts {
     text-shadow:
-        0 4px 24px rgba(0,0,0,0.8),
+        0 4px 24px rgba(0, 0, 0, 0.8),
         0 1px 0 #fff,
         0 0 40px violet;
     font-weight: 900;
     letter-spacing: 2px;
 }
+
 * {
     margin: 0;
     font-family: 'inter', sans-serif;
+
 }
 
 body {
@@ -163,13 +165,14 @@ ul>li:hover:not(.ctaBtn)>a {
     padding: 50px 20px;
     background-image: url(./utils/images/3.png);
     background-size: cover;
-    background-position-x: left;
-    background-position-y: 30%;
+    background-position: center;
+    background-repeat: repeat;
 }
 
 .step-card {
     height: 500px;
-    border-radius: 10px;
+    border-radius: 20px;
+    border: none;
     background-color: #ffff;
     width: 100%;
     display: flex;
@@ -183,75 +186,208 @@ ul>li:hover:not(.ctaBtn)>a {
     background-size: cover;
     box-shadow: 0px 8px 40px 8px rgba(1, 39, 41, 0.7), 0 2px 24px 0px rgba(0, 0, 0, 0.9);
 }
-.step-card:hover{
+
+.step-card:hover {
+    border: none;
     background-image: url(./utils/images/night-2.png);
     transition: background-image 1s linear;
 }
+
 .about-word::after {
-  content: "";
-  position: absolute;
-  width: 200px;
-  left: 44%;
-  right: 0;
-  bottom: -3px;
-  border-radius: 10px;
-  height: 5px;
-  background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
-  transform: scaleX(1);
-  transition: transform 0.3s;
-  transform-origin: right;
+    content: "";
+    position: absolute;
+    width: 200px;
+    left: 44%;
+    right: 0;
+    bottom: -3px;
+    border-radius: 10px;
+    height: 5px;
+    background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+    transform: scaleX(1);
+    transition: transform 0.3s;
+    transform-origin: right;
 }
-.one{
+
+.one {
     text-align: center;
-    margin-top: 60px;
-    height: auto;
+    padding: 0;
+    top: 0;
+    height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #000000;
     box-shadow: 0px 8px 14px 8px rgba(0, 0, 0, 0.5);
 }
 
 
-    .rhombus-wrapper {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 250px;
-      height: 250px;
-      transform: rotate(45deg);
-      border: 3px solid transparent;
-      background: #0e0e23;
-      box-shadow: 0 0 20px rgba(0,255,255,0.2);
-      margin: 90px 0 0 0;
+.rhombus-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    transform: rotate(45deg);
+    border: 3px solid transparent;
+    background: #0e0e23;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    margin: 90px 0 0 0;
+}
+
+.glow-border {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(45deg, cyan, #00f7ff, #00c3ff, cyan);
+    background-size: 400% 400%;
+    z-index: -1;
+    filter: blur(8px);
+    opacity: 0.7;
+}
+
+.content {
+    transform: rotate(-45deg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    color: white;
+    position: relative;
+    top: 0;
+}
+
+.content>h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-size: 25px;
+    margin: -10px 0 0 0;
+}
+
+.content>p {
+    font-size: 0.9rem;
+    color: #ccccff;
+}
+
+.content>img {
+    margin: -60px 0 0 0;
+    object-fit: contain;
+    width: 120px;
+}
+
+
+.reviews-section {
+    overflow: hidden;
+    position: relative;
+    padding: 40px 0;
+    background: transparent;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.reviews-section h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Slider container */
+.customer-testimonials-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+}
+
+/* Animation keyframes */
+@keyframes scrollTestimonials {
+    0% {
+        transform: translateX(0);
     }
 
-    .glow-border {
-      position: absolute;
-      top: -3px;
-      left: -3px;
-      right: -3px;
-      bottom: -3px;
-      background: linear-gradient(45deg, cyan, #00f7ff, #00c3ff, cyan);
-      background-size: 400% 400%;
-      z-index: -1;
-      filter: blur(8px);
-      opacity: 0.7;
+    100% {
+        transform: translateX(calc(-340px * 6 - 30px * 5));
+        /* Width of all cards + gaps */
     }
+}
 
-    .content {
-      transform: rotate(-45deg);
-      text-align: center;
-      padding: 40px 10px;
-      color: white;
-    }
+/* Testimonials track */
+.testimonials-track {
+    display: flex;
+    gap: 30px;
+    animation: scrollTestimonials 30s linear infinite;
+    will-change: transform;
+    width: max-content;
+    /* Makes the track only as wide as its content */
+}
 
-    .content > h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
+.testimonials-track.paused {
+    animation-play-state: paused;
+}
 
-    .content > p {
-      font-size: 0.9rem;
-      color: #ccccff;
-    }
+/* Individual testimonial cards */
+.testimonial-card {
+    min-width: 320px;
+    max-width: 340px;
+    background: transparent;
+    color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+    padding: 28px 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.02);
+    /* box-shadow: 0 8px 32px rgba(161, 196, 253, 0.25); */
+}
+
+.testimonial-card img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    opacity: 0.7;
+}
+
+.testimonial-card .name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.testimonial-card .text {
+    margin-bottom: 12px;
+    color: #c2e9fb;
+    font-size: 19px;
+    text-align: center;
+    min-height: 60px;
+    font-family: "Merriweather", serif;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 0;
+}
+
+.stars .fa-star {
+    color: #ffd700;
+    font-size: 1.1rem;
+}
+
+.stars .fa-star-o {
+    color: #888;
+    font-size: 1.1rem;
+}
