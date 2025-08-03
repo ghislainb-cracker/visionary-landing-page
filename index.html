@@ -79,7 +79,7 @@
             </div>
         </section>
 
-        <section style="margin-bottom: 100px;height: 150vh; width: 100%; padding: 0;">
+        <section style="height: 150vh; width: 100%; padding: 0;">
             <div class="one">
                 <h1 style="font-size: 90px; color: violet;" class="texts">Discover what is featured in visionary</h1>
                 <div
@@ -130,9 +130,66 @@
 
         <section class="reviews-section">
             <h1 style="font-size: 90px; color: violet; text-align: center;" class="texts">What our customers say</h1>
-            <div class="customer-testimonials-slider">
-                <div class="testimonials-track" id="testimonialsTrack">
-                    <!-- testimonail card -->
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <div>
+                        <img src="./utils/images/2.png" alt="" class="testimonial-img">
+                    </div>
+                    <div>
+                        <h2>Ghislain Byimbo</h2>
+                        <p>in the name of jesus he is very more talented than anyone i've ever seen. and jesus is the
+                            king of all time</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div>
+                        <img src="./utils/images/2.png" alt="" class="testimonial-img">
+                    </div>
+                    <div>
+                        <h2>Ghislain Byimbo</h2>
+                        <p>in the name of jesus he is very more talented than anyone i've ever seen. and jesus is the
+                            king of all time</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div>
+                        <img src="./utils/images/2.png" alt="" class="testimonial-img">
+                    </div>
+                    <div>
+                        <h2>Ghislain Byimbo</h2>
+                        <p>in the name of jesus he is very more talented than anyone i've ever seen. and jesus is the
+                            king of all time</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div>
+                        <img src="./utils/images/2.png" alt="" class="testimonial-img">
+                    </div>
+                    <div>
+                        <h2>Ghislain Byimbo</h2>
+                        <p>in the name of jesus he is very more talented than anyone i've ever seen. and jesus is the
+                            king of all time</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div>
+                        <img src="./utils/images/2.png" alt="" class="testimonial-img">
+                    </div>
+                    <div>
+                        <h2>Ghislain Byimbo</h2>
+                        <p>in the name of jesus he is very more talented than anyone i've ever seen. and jesus is the
+                            king of all time</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div>
+                        <img src="./utils/images/2.png" alt="" class="testimonial-img">
+                    </div>
+                    <div>
+                        <h2>Ghislain Byimbo</h2>
+                        <p>in the name of jesus he is very more talented than anyone i've ever seen. and jesus is the
+                            king of all time</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -161,138 +218,6 @@
         { scale: 1.05, yoyo: true, repeat: -1, duration: 2, ease: "power1.inOut" }
     );
 
-
-
-
-    const testimonials = [
-        {
-            name: "Sarah M.",
-            avatar: "https://randomuser.me/api/portraits/men/8.jpg",
-            text: "Absolutely love my new sofa! The quality is top-notch and delivery was super fast. Will definitely shop here again.",
-            rating: 5
-        },
-        {
-            name: "James K.",
-            avatar: "https://randomuser.me/api/portraits/men/15.jpg",
-            text: "Great customer service and the dining table fits perfectly in my apartment. Highly recommend Fun Furniture!",
-            rating: 4
-        },
-        {
-            name: "Linda W.",
-            avatar: "https://randomuser.me/api/portraits/men/25.jpg",
-            text: "The bed I ordered is so comfy and stylish. The whole process was smooth and easy.",
-            rating: 5
-        },
-        {
-            name: "Michael B.",
-            avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-            text: "I was impressed by the variety and the prices. My new bookshelf looks amazing in my study.",
-            rating: 4
-        },
-        {
-            name: "Aisha T.",
-            avatar: "https://randomuser.me/api/portraits/men/41.jpg",
-            text: "Fast shipping and the product matches the description perfectly. Thank you!",
-            rating: 5
-        },
-        {
-            name: "Carlos R.",
-            avatar: "https://randomuser.me/api/portraits/women/68.jpg",
-            text: "The chair is sturdy and comfortable. I appreciate the eco-friendly packaging too.",
-            rating: 4
-        },
-        // Duplicate the first few items to create infinite loop effect
-        {
-            name: "Sarah M.",
-            avatar: "https://randomuser.me/api/portraits/men/8.jpg",
-            text: "Absolutely love my new sofa! The quality is top-notch and delivery was super fast. Will definitely shop here again.",
-            rating: 5
-        },
-        {
-            name: "James K.",
-            avatar: "https://randomuser.me/api/portraits/men/15.jpg",
-            text: "Great customer service and the dining table fits perfectly in my apartment. Highly recommend Fun Furniture!",
-            rating: 4
-        },
-        {
-            name: "Linda W.",
-            avatar: "https://randomuser.me/api/portraits/men/25.jpg",
-            text: "The bed I ordered is so comfy and stylish. The whole process was smooth and easy.",
-            rating: 5
-        },
-        {
-            name: "Michael B.",
-            avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-            text: "I was impressed by the variety and the prices. My new bookshelf looks amazing in my study.",
-            rating: 4
-        },
-        {
-            name: "Aisha T.",
-            avatar: "https://randomuser.me/api/portraits/men/41.jpg",
-            text: "Fast shipping and the product matches the description perfectly. Thank you!",
-            rating: 5
-        },
-        {
-            name: "Carlos R.",
-            avatar: "https://randomuser.me/api/portraits/women/68.jpg",
-            text: "The chair is sturdy and comfortable. I appreciate the eco-friendly packaging too.",
-            rating: 4
-        },
-    ];
-
-    // Function to create star rating HTML
-    function createStars(rating) {
-        let starsHTML = '';
-        for (let i = 0; i < 5; i++) {
-            const starType = i < rating ? 'fa-star' : 'fa-star-o';
-            starsHTML += `<i class="fa ${starType}" aria-hidden="true"></i>`;
-        }
-        return starsHTML;
-    }
-
-    // Function to render testimonials
-    function renderTestimonials() {
-        const track = document.getElementById('testimonialsTrack');
-        track.innerHTML = testimonials.map(testimonial => `
-                <div class="testimonial-card">
-                    <img src="${testimonial.avatar}" alt="${testimonial.name}">
-                    <div class="name">${testimonial.name}</div>
-                    <div class="text">"${testimonial.text}"</div>
-                    <div class="stars">
-                        ${createStars(testimonial.rating)}
-                    </div>
-                </div>
-            `).join('');
-    }
-
-    // Initialize the slider
-    document.addEventListener('DOMContentLoaded', () => {
-        renderTestimonials();
-
-        const track = document.getElementById('testimonialsTrack');
-
-        // Pause animation on hover
-        track.addEventListener('mouseenter', () => {
-            track.classList.add('paused');
-        });
-
-        track.addEventListener('mouseleave', () => {
-            track.classList.remove('paused');
-        });
-
-        // Add hover effects to each card
-        document.querySelectorAll('.testimonial-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'scale(1.02)';
-                // card.style.boxShadow = '0 8px 32px rgba(161,196,253,0.25)';
-            });
-
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'scale(1)';
-                card.style.boxShadow = '0 4px 24px rgba(0,0,0,0.15)';
-            });
-        });
-    });
 </script>
 
 </html>

@@ -282,12 +282,12 @@ ul>li:hover:not(.ctaBtn)>a {
 
 
 .reviews-section {
+    margin: 0;
     overflow: hidden;
     position: relative;
-    padding: 40px 0;
+    padding: 10px 0;
     background: transparent;
     width: 100%;
-    margin: 0 auto;
 }
 
 .reviews-section h1 {
@@ -296,98 +296,24 @@ ul>li:hover:not(.ctaBtn)>a {
     text-align: center;
     font-weight: 600;
 }
-
-/* Slider container */
-.customer-testimonials-slider {
+.testimonial-container{
     width: 100%;
-    overflow: hidden;
-    position: relative;
-    padding: 10px 0;
+    height: 100%;
+    display: grid;
+    padding: 30px 0;
+    grid-template: auto auto/ repeat(3, 1fr);
+    gap: 20px
 }
-
-/* Animation keyframes */
-@keyframes scrollTestimonials {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(calc(-340px * 6 - 30px * 5));
-        /* Width of all cards + gaps */
-    }
-}
-
-/* Testimonials track */
-.testimonials-track {
+.testimonial{
+    height: 100px;
     display: flex;
-    gap: 30px;
-    animation: scrollTestimonials 30s linear infinite;
-    will-change: transform;
-    width: max-content;
-    /* Makes the track only as wide as its content */
+    gap: 20px;
+    justify-content: center;
+    padding: 10px 5px;
+    /* border: 1px solid white; */
 }
-
-.testimonials-track.paused {
-    animation-play-state: paused;
-}
-
-/* Individual testimonial cards */
-.testimonial-card {
-    min-width: 320px;
-    max-width: 340px;
-    background: transparent;
-    color: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
-    padding: 28px 24px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-}
-
-.testimonial-card:hover {
-    transform: scale(1.02);
-    /* box-shadow: 0 8px 32px rgba(161, 196, 253, 0.25); */
-}
-
-.testimonial-card img {
-    width: 64px;
-    height: 64px;
+.testimonial-img{
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 16px;
-    opacity: 0.7;
-}
-
-.testimonial-card .name {
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-}
-
-.testimonial-card .text {
-    margin-bottom: 12px;
-    color: #c2e9fb;
-    font-size: 19px;
-    text-align: center;
-    min-height: 60px;
-    font-family: "Merriweather", serif;
-}
-
-.stars {
-    display: flex;
-    gap: 2px;
-    margin-bottom: 0;
-}
-
-.stars .fa-star {
-    color: #ffd700;
-    font-size: 1.1rem;
-}
-
-.stars .fa-star-o {
-    color: #888;
-    font-size: 1.1rem;
 }
