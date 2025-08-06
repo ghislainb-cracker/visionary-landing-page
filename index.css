@@ -393,3 +393,30 @@ ul>li:hover:not(.ctaBtn)>a {
 .card-down{
     margin-top: 30px;
 }
+.features-container > ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: disc;
+    margin: 20px 0 0 14px;
+    list-style-position: outside;
+}
+.features-container > ul li{
+    vertical-align: middle;
+}
+.features-container > ul li:not(first-child){
+    margin-top: -10px;
+}
+.features-container > ul li::marker{
+    vertical-align: middle;
+    font-size: 30px;
+}
+.features-container1 > ul li:first-child::marker{
+    vertical-align: middle;
+    font-size: 30px;
+    color: #d6d6d6;
+}
+.features-container1 > ul li:nth-child(2)::marker{
+    vertical-align: middle;
+    font-size: 30px;
+    color: #d6d6d6;
+}
